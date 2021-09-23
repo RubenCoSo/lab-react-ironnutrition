@@ -4,9 +4,8 @@ const { Meta } = Card;
 
 export default function FoodCard(props) {
   return (
-    <Col>
+    <Col key={props.food.name}>
       <Card
-        key={props.food.name}
         hoverable
         style={{ width: 230, height: 300, margin: 10 }}
         cover={<img src={props.food.image} alt={props.food.name} />}
